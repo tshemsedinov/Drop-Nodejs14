@@ -1,6 +1,6 @@
-## Drop Node.js 14 support
+## Drop Node.js 14 support in your projects
 
-- Now: Apr 2023, we have Node.js 18.16.0 LTS, 16.20.0 (maintenance) and 20.0.0 (latest)
+- Now: April 2023, we have Node.js 18.16.0 LTS, 16.20.0 (maintenance) and 20.0.0 (latest)
 - Going to drop Node.js 14 support in all HowProgrammingWorks and Node.js courses, Metarhia codebase
 - Now we can rely on Node.js 16.20.0 capabilities
 - See release schedule: https://github.com/nodejs/release#release-schedule
