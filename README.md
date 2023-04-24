@@ -55,5 +55,6 @@ Available in all currently supported Node.js versions as of April 2023
 ### Note that you can't freely use
 
 - Following features are still experimental in at least one of supported node.js versions `--watch`, `process.getActiveResourcesInfo`, `fs.cp`, and `fsPromises.cp`, `Readable` methods `map`, `filter`, `compose`, `iterator`, `forEach` and so on
+- Fetch API is experimental in node.js 16.x and 17.x, and available without `--no-experimental-fetch` flag only from 18.0 and above, use `undici` from npm for previous node.js versions: https://github.com/nodejs/undici
 - ESM and CJS loaders API is currently being redesigned and will still change
 - Startup Snapshot API and Web Streams API are still experimental, see docs: https://nodejs.org/api/v8.html#startup-snapshot-api
