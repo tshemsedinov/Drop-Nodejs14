@@ -20,7 +20,7 @@
 - Stop using `emitter.listeners`; use `events.getEventListeners(emitter, eventName)` instead, see docs: https://nodejs.org/api/events.html#eventsgeteventlistenersemitterortarget-eventname
 - Now `response` (http.ServerResponse) has a reference to `request` instance (http.IncomingMessage): `response.req`
 - Stop using `node:url` API; use JavaScript URL class instead
-- Note that unhandled promise rejections are deprecated and will terminate the process with a non-zero exit code. Add a `process.on('uncaughtException', (reason, orogin) => {})` handler to prevent process termination
+- Note that unhandled promise rejections are deprecated and will terminate the process with a non-zero exit code. Add a `process.on('uncaughtException', (reason, origin) => {})` handler to prevent process termination
 - Stop using deprecated `process.on('multipleResolves', handler)`
 - Stop using deprecated `process.config`
 - Check for deprecated `Thenable` support in streams
