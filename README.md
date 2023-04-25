@@ -22,7 +22,7 @@
 - Stop using `node:url` API; use JavaScript URL class instead
 - Note that unhandled promise rejections are deprecated and will terminate the process with a non-zero exit code. Add a `process.on('uncaughtException', (reason, origin) => {})` handler to prevent process termination
 - Stop using deprecated `process.on('multipleResolves', handler)`
-- Stop using deprecated `process.config`
+- Don't change `process.config` (frozen)
 - Check for deprecated `Thenable` support in streams
 - Ensure only integer values are used for `process.exit(code)` and `process.exitCode`
 - The well-known MODP groups modp1, modp2, and modp5 are deprecated due to their lack of security against practical attacks
