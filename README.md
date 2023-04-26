@@ -17,7 +17,7 @@
 - Check `stream.destroyed` instead of the `.aborted` property, and listen for `close` event instead of `abort` and `aborted` events for `ClientRequest`, `ServerResponse`, and `IncomingMessage`
 - Stop using deprecated `Server.connections`; use `Server.getConnections()` instead, see docs: https://nodejs.org/api/net.html#servergetconnectionscallback
 - Do not use default `index.js` as of Node.js 16.0.0; the main entry point should be explicitly defined
-- Stop using `emitter.listeners`; use `events.getEventListeners(emitter, eventName)` instead, see docs: https://nodejs.org/api/events.html#eventsgeteventlistenersemitterortarget-eventname
+- Stop using `emitter.listeners` property; use `emitter.listeners(eventName)` and `events.getEventListeners(emitter, eventName)` instead to get copy of listeners collection, see docs: https://nodejs.org/api/events.html#eventsgeteventlistenersemitterortarget-eventname
 - Now `response` (http.ServerResponse) has a reference to `request` instance (http.IncomingMessage): `response.req`
 - Stop using `node:url` API; use JavaScript URL class instead
 - Note that unhandled promise rejections are deprecated and will terminate the process with a non-zero exit code. Add a `process.on('uncaughtException', (reason, origin) => {})` handler to prevent process termination
