@@ -62,3 +62,15 @@ Available in all currently supported Node.js versions as of April 2023
 - Fetch API is experimental in node.js 16.x and 17.x, and available without `--no-experimental-fetch` flag only from 18.0 and above, use `undici` from npm for previous node.js versions: https://github.com/nodejs/undici
 - ESM and CJS loaders API is currently being redesigned and will still change
 - Startup Snapshot API and Web Streams API are still experimental, see docs: https://nodejs.org/api/v8.html#startup-snapshot-api
+
+### Use node.js features instead of dependencies
+
+- Use `nodejs/undicu` instead of npm modules `request`, `axios`, `node-fetch`
+- Prefer to use `node:child_process` and `node:worker_trheads` for CPU utilization and multithreading instead of `node:cluster`
+- Prefer to use npm module `ws` + browser native implementation of `Websocket` instead of `socket.io`
+- Use native `node:crypto.script` for password hashing or `argon2` from npm instead of `bcrypt` or other npm modules
+- Use `node:async_hooks` instead of `zone.js` or deprecated built-in node.js `domain` module
+- Prefer to use `docker` instead of `pm2` or `forever` npm modules
+- Prefer to use `fastify` or native `node:http` + collection of routes `Map<string, Function>` instead of archaic `express`, `connect`, `koa`
+- Use `Intl` and ES6 built-in features instead of `moment.js`
+- Use `${templateStrings}` instead of `ejs` or other npm modules for tamplating
