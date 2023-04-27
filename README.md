@@ -12,7 +12,11 @@
 - Change deprecated `cluster.isMaster` to `cluster.isPrimary`, change `cluster.setupMaster` to `cluster.setupPrimary`
 - Check all `require` calls to use `node:` prefix for all internal node.js modules, for example: `node:fs`
 - Use `crypto.randomUUID()` to generate UUID instead of manual generation or third-party modules
-- Stop using `fs.exists`; use `fs.stat` or `fs.access` instead
+- Stop using `fs.exists`; use `fs.stat` or `fs.access` instead, see example:
+```js
+const toBool = [() => true, () => false];
+const exists = await fs.promises.access(filePath).then(...toBool);
+```
 - Stop using `fs.rmdir(path, { recursive: true })`; use `fs.rm(path, { recursive: true })` instead, see docs: https://nodejs.org/api/fs.html#fsrmpath-options-callback
 - Check `stream.destroyed` instead of the `.aborted` property, and listen for `close` event instead of `abort` and `aborted` events for `ClientRequest`, `ServerResponse`, and `IncomingMessage`
 - Stop using deprecated `Server.connections`; use `Server.getConnections()` instead, see docs: https://nodejs.org/api/net.html#servergetconnectionscallback
