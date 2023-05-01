@@ -65,7 +65,7 @@ Available in all currently supported Node.js versions as of April 2023
 
 ### Use node.js features instead of dependencies
 
-- Use `nodejs/undicu` instead of npm modules `request`, `axios`, `node-fetch`
+- Use `nodejs/undici` instead of npm modules `request`, `axios`, `node-fetch`
 - Prefer to use `node:child_process` and `node:worker_trheads` for CPU utilization and multithreading instead of `node:cluster`
 - Prefer to use npm module `ws` + browser native implementation of `Websocket` instead of `socket.io`
 - Use native `node:crypto.script` for password hashing or `argon2` from npm instead of `bcrypt` or other npm modules
