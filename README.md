@@ -73,4 +73,4 @@ Available in all currently supported Node.js versions as of April 2023
 - Prefer to use `docker` instead of `pm2` or `forever` npm modules
 - Prefer to use `fastify` or native `node:http` + collection of routes `Map<string, Function>` instead of archaic `express`, `connect`, `koa`
 - Use `Intl` and ES6 built-in features instead of `moment.js`
-- Use `${templateStrings}` instead of `ejs` or other npm modules for tamplating
+- Use `${templateStrings}` instead of `ejs` or other npm modules for templating
